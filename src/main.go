@@ -1,8 +1,9 @@
 package main
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+
+	"src/routes"
 )
 
 func main() {
@@ -10,9 +11,7 @@ func main() {
 	router.LoadHTMLGlob("views/*.html")
 	router.Static("/assets", "./assets")
 
-	router.GET("/", func(ctx *gin.Context){
-		ctx.HTML(http.StatusOK, "index.html", gin.H{})
-	})
+	router.GET("/", routes.Home)
 
 	router.Run(":8080")
 }

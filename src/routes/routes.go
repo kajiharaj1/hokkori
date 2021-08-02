@@ -2,6 +2,7 @@ package routes
 
 import (
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -19,6 +20,6 @@ func SignUp(ctx *gin.Context) {
 
 func NoRoute(ctx *gin.Context) {
 	ctx.JSON(http.StatusNotFound, gin.H{
-		"code": "PAGE_NOT_FOUND",
+		"code":    "PAGE_NOT_FOUND",
 		"message": "Page not found"})
 }

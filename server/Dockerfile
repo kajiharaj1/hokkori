@@ -13,3 +13,4 @@ RUN cd /go/src/hokkori
 
 # godocインストール
 RUN go get golang.org/x/tools/cmd/godoc
+RUN go get github.com/gin-gonic/gin
